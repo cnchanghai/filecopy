@@ -1,0 +1,10 @@
+1	1	*/7	*	*  rm -f /var/log/web/*.log
+1	2	*	*	* su - root -c "init 6"
+19	*/4	*	*	*  su - root  -c  "/usr/bin/python36  /data/clog/manage.py getzimeiti"  >> /var/log/web/zimeiti.log  2>&1
+11	*/4	*	*	*  su - root  -c  "/usr/bin/python36  /data/clog/manage.py getfuli"  >> /var/log/web/fuli.log  2>&1
+36	*/6	*	*	*	su - root  -c  "/usr/bin/python36  /data/clog/manage.py getmovie"  >> /var/log/web/movie.log  2>&1
+26	*/3	*	*	*	su - root  -c  "/usr/bin/python36  /data/clog/manage.py getyaoyan"  >> /var/log/web/yaoyan.log  2>&1
+*/15    *       *       *       *   su - root  -c  "/usr/bin/python36  /data/clog/manage.py gamelive"  >> /var/log/web/gamelive.log  2>&1
+#52     */2      *       *       *   su - root  -c  "/usr/bin/python36  /data/clog/manage.py getnews"  >> /var/log/web/news.log  2>&1
+01      9      *       *       *   su - root  -c  "/usr/bin/python36  /data/job/ctodoudou.py"  >> /var/log/web/ctodoudou.log  2>&1
+
